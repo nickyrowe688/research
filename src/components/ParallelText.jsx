@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
-import clsx from 'clsx';
 import styles from './ParallelText.module.css';
+import AnnotatedText from './AnnotatedText';
 
 export default function ParallelText({ lines }) {
   useEffect(() => {
@@ -25,9 +25,9 @@ export default function ParallelText({ lines }) {
       {lines.map(l => (
         <div key={l.line} id={`line-${l.line}`} className={styles.row}>
           <div className={styles.lineNo}>{l.line}</div>
-          <div className={styles.original}>{l.original}</div>
-          <div className={styles.modern}>{l.modern}</div>
-          <div className={styles.english}>{l.english}</div>
+          <div className={styles.original}><AnnotatedText text={l.original} /></div>
+          <div className={styles.modern}><AnnotatedText text={l.modern} /></div>
+          <div className={styles.english}><AnnotatedText text={l.english} /></div>
         </div>
       ))}
     </div>
