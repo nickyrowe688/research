@@ -1,9 +1,11 @@
-import Details from '@theme/Details';
-
 ---
 sidebar_label: 'Hi!'
 sidebar_position: 2
 ---
+
+import Details from '@theme/Details';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 
 # Category
 
@@ -54,9 +56,7 @@ Using markup
 
 ## Details
 
-<details>
-  <summary>Toggle me!</summary>
-
+<Details summary="Toggle me!">
   This is the detailed content
 
   ```js
@@ -64,17 +64,13 @@ Using markup
   ```
 
   You can use Markdown here including **bold** and _italic_ text, and [inline link](https://docusaurus.io)
-  <details>
-    <summary>Nested toggle! Some surprise inside...</summary>
 
+  <Details summary="Nested toggle! Some surprise inside...">
     😲😲😲😲😲
-  </details>
-</details>
+  </Details>
+</Details>
 
 ## Tabs
-
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
 
 <Tabs>
   <TabItem value="apple" label="Apple" default>
