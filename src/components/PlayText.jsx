@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import styles from './PlayText.module.css';
+import AnnotatedText from './AnnotatedText';
 
 export default function PlayText({ blocks }) {
   useEffect(() => {
@@ -41,9 +42,9 @@ function renderBlock(block, key) {
       return (
         <div className={styles.speaker}>
           <div className={styles.lineNo}>{block.line}</div>
-          <div>{block.original}</div>
-          <div>{block.modern}</div>
-          <div>{block.english}</div>
+          <div><AnnotatedText text={block.original} /></div>
+          <div><AnnotatedText text={block.modern} /></div>
+          <div><AnnotatedText text={block.english} /></div>
         </div>
       );
 
@@ -51,9 +52,9 @@ function renderBlock(block, key) {
       return (
         <div className={styles.stage}>
           <div className={styles.lineNo}>{block.line}</div>
-          <div>{block.original}</div>
-          <div>{block.modern}</div>
-          <div>{block.english}</div>
+          <div><AnnotatedText text={block.original} /></div>
+          <div><AnnotatedText text={block.modern} /></div>
+          <div><AnnotatedText text={block.english} /></div>
         </div>
       );
 
@@ -65,9 +66,9 @@ function renderBlock(block, key) {
           className={styles.line}
         >
           <div className={styles.lineNo}>{block.line}</div>
-          <div>{block.original}</div>
-          <div>{block.modern}</div>
-          <div>{block.english}</div>
+          <div><AnnotatedText text={block.original} /></div>
+          <div><AnnotatedText text={block.modern} /></div>
+          <div><AnnotatedText text={block.english} /></div>
         </div>
       );
 

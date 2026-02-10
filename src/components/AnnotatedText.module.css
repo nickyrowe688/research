@@ -1,0 +1,29 @@
+.noteWrapper {
+  display: inline;
+  margin-left: 0.25rem;
+}
+
+.noteButton {
+  display: inline;
+  border: none;
+  background: none;
+  color: var(--ifm-color-primary);
+  cursor: pointer;
+  font: inherit;
+  padding: 0;
+  text-decoration: underline;
+}
+
+.noteButton:hover {
+  color: var(--ifm-color-primary-dark);
+}
+
+.noteContent {
+  display: inline-block;
+  margin-left: 0.35rem;
+  padding: 0.15rem 0.4rem;
+  border-radius: 0.25rem;
+  background: var(--ifm-color-emphasis-200);
+  color: var(--ifm-color-emphasis-900);
+  font-size: 0.9em;
+}
