@@ -1,6 +1,0 @@
-# Primary auxiliaries
-
-## bos
-
-## gwul
-
